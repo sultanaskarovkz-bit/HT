@@ -1,0 +1,30 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A2B3C"/>
+      <stop offset="100%" stop-color="#0E1B2A"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square base -->
+  <rect width="64" height="64" rx="12" fill="url(#bg)"/>
+  <!-- Outer gold ring -->
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#B8A17A" stroke-width="1.4"/>
+  <!-- Inner gold disc with horizontal lines (Port Shelter waters) -->
+  <circle cx="32" cy="32" r="20" fill="#B8A17A"/>
+  <!-- Horizontal lines pattern -->
+  <g stroke="#1A2B3C" stroke-width="1" opacity=".55">
+    <line x1="14" y1="26" x2="50" y2="26"/>
+    <line x1="14" y1="30" x2="50" y2="30"/>
+    <line x1="14" y1="34" x2="50" y2="34"/>
+    <line x1="14" y1="38" x2="50" y2="38"/>
+  </g>
+  <!-- Sailboat silhouette: mainsail + jib + hull -->
+  <!-- Mainsail (right, larger) -->
+  <path d="M 32 16 Q 40 28 39 42 L 32 42 Z" fill="#1A2B3C"/>
+  <!-- Jib (left, smaller) -->
+  <path d="M 32 18 L 32 42 L 24 42 Z" fill="#1A2B3C"/>
+  <!-- Hull -->
+  <path d="M 22 42 L 42 42 L 38 48 L 26 48 Z" fill="#1A2B3C"/>
+  <!-- Waterline waves -->
+  <path d="M 18 50 Q 22 48 26 50 T 34 50 T 42 50 T 46 50" fill="none" stroke="#1A2B3C" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
