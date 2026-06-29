@@ -1728,6 +1728,17 @@ img{
 #navLogo, #footLogo, #loaderLogo{
   background:transparent;
 }
+/* Dining: uppercase the "culinary haven" heading per client request */
+.dining-story .intro__heading{ text-transform:uppercase; letter-spacing:.012em; }
+/* Dining photo gallery */
+.resto-gallery{ padding:0 0 clamp(60px,10vh,120px); background:var(--bg); }
+.resto-gallery__head{ margin-bottom:34px; }
+.resto-gallery__title{ font-family:var(--f-display); font-weight:500; font-size:clamp(26px,3.2vw,42px); color:var(--ink); line-height:1.06; margin:10px 0 0; }
+.resto-gallery__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.resto-gallery__item{ margin:0; overflow:hidden; border-radius:4px; aspect-ratio:4/3; background:var(--bg-alt); }
+.resto-gallery__item img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s var(--ease); }
+.resto-gallery__item:hover img{ transform:scale(1.05); }
+@media (max-width:768px){ .resto-gallery__grid{ grid-template-columns:repeat(2,1fr); } }
 
 /* Mobile photo positioning tuning */
 @media (max-width:768px){
@@ -2221,13 +2232,30 @@ img{
           <div class="eyebrow" data-i18n="dp.storyEy">The dining room</div>
           <h2 class="intro__heading" style="margin-top:14px;">
             <span data-i18n="dp.story1">A culinary haven</span>
-            <em data-i18n="dp.story2">with unrivaled views.</em>
+            <em data-i18n="dp.story2">with unrivaled views</em>
           </h2>
         </div>
         <div class="reveal">
           <p class="intro__lead" data-i18n="dp.body1">Our restaurant provides the perfect backdrop for any occasion, from relaxing family meals to intimate gatherings and sophisticated business entertainment. The ambiance shifts gracefully with the harbour, from the golden hues of afternoon light to the serene tranquility of evening blue.</p>
           <p class="intro__body" data-i18n="dp.body2">We specialise in fresh, locally sourced seafood and international delicacies, expertly prepared to tantalise your palate. Experience the unique blend of exquisite cuisine and stunning natural beauty that defines waterfront restaurants in Hong Kong.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="resto-gallery">
+    <div class="wrap">
+      <div class="resto-gallery__head reveal">
+        <div class="eyebrow" data-i18n="dp.galEy">The terrace &amp; dining room</div>
+        <h2 class="resto-gallery__title" data-i18n="dp.galTitle">A table with a view</h2>
+      </div>
+      <div class="resto-gallery__grid">
+        <figure class="resto-gallery__item reveal"><img data-img="resto-1" alt="Terrace dining with harbour views at Hong Kong Marina, Sai Kung" loading="lazy"></figure>
+        <figure class="resto-gallery__item reveal"><img data-img="resto-2" alt="Evening terrace dining by candlelight overlooking the marina, Sai Kung" loading="lazy"></figure>
+        <figure class="resto-gallery__item reveal"><img data-img="resto-3" alt="Warm candlelit dining room at Hong Kong Marina, Sai Kung" loading="lazy"></figure>
+        <figure class="resto-gallery__item reveal"><img data-img="resto-4" alt="Elegant waterfront dining room with sea views at Hong Kong Marina, Sai Kung" loading="lazy"></figure>
+        <figure class="resto-gallery__item reveal"><img data-img="resto-5" alt="Candlelit tables set for dinner at the marina restaurant, Sai Kung" loading="lazy"></figure>
+        <figure class="resto-gallery__item reveal"><img data-img="resto-6" alt="Intimate evening dining at Hong Kong Marina, Sai Kung" loading="lazy"></figure>
       </div>
     </div>
   </section>
@@ -2587,6 +2615,12 @@ const IMG = {};
     'restaurant':      'images/restaurant.jpg',
     'restaurant-2':    'images/restaurant-2.jpg',
     'restaurant-wide': 'images/restaurant-wide.jpg',
+    'resto-1':         'images/resto-1.jpg',
+    'resto-2':         'images/resto-2.jpg',
+    'resto-3':         'images/resto-3.jpg',
+    'resto-4':         'images/resto-4.jpg',
+    'resto-5':         'images/resto-5.jpg',
+    'resto-6':         'images/resto-6.jpg',
     'logo-sm':         'images/logo.png',
     'logo-lg':         'images/logo.png'
   });
@@ -2726,6 +2760,8 @@ const IMG = {};
       'dp.storyEy': 'The dining room',
       'dp.story1': 'A culinary haven',
       'dp.story2': 'with unrivaled views',
+      'dp.galEy': 'The terrace & dining room',
+      'dp.galTitle': 'A table with a view',
       'dp.body1': 'Our restaurant provides the perfect backdrop for any occasion, from relaxing family meals to intimate gatherings and sophisticated business entertainment. The ambiance shifts gracefully with the harbour, from the golden hues of afternoon light to the serene tranquility of evening blue.',
       'dp.body2': 'We specialise in fresh, locally sourced seafood and international delicacies, expertly prepared to tantalise your palate. Experience the unique blend of exquisite cuisine and stunning natural beauty that defines waterfront restaurants in Hong Kong.',
       'dp.menuEy': 'From the kitchen',
@@ -2914,6 +2950,8 @@ const IMG = {};
       'dp.storyEy': '餐廳',
       'dp.story1': '味覺天地',
       'dp.story2': '坐擁無敵海景。',
+      'dp.galEy': '露台與餐廳',
+      'dp.galTitle': '盡覽海景的餐桌',
       'dp.body1': '無論是輕鬆的家庭餐敘、親密的聚會,還是高雅的商務款待,我們的餐廳都是完美的場景。氛圍隨港灣優雅流轉 — 從午後的金黃光暈,到傍晚寧靜的深藍。',
       'dp.body2': '我們專注於新鮮的本地海鮮與國際佳餚,以精湛廚藝挑動您的味蕾。體驗精緻美食與壯麗自然之美的獨特交融 — 這正是香港海濱餐廳的精髓所在。',
       'dp.menuEy': '出自廚房',
@@ -3102,6 +3140,8 @@ const IMG = {};
       'dp.storyEy': '餐厅',
       'dp.story1': '味觉天地',
       'dp.story2': '坐拥无敌海景。',
+      'dp.galEy': '露台与餐厅',
+      'dp.galTitle': '尽览海景的餐桌',
       'dp.body1': '无论是轻松的家庭餐叙、亲密的聚会,还是高雅的商务款待,我们的餐厅都是完美的场景。氛围随港湾优雅流转 — 从午后的金黄光晕,到傍晚宁静的深蓝。',
       'dp.body2': '我们专注于新鲜的本地海鲜与国际佳肴,以精湛厨艺挑动您的味蕾。体验精致美食与壮丽自然之美的独特交融 — 这正是香港海滨餐厅的精髓所在。',
       'dp.menuEy': '出自廚房',
