@@ -1834,8 +1834,10 @@ img{
   <div class="nav__right">
     <div class="lang" id="lang">
       <button data-lang="en" class="is-active">EN</button>
+      <!-- Chinese temporarily hidden — to be re-enabled later
       <button data-lang="zh-Hant">繁</button>
       <button data-lang="zh-Hans">简</button>
+      -->
     </div>
     <a href="#" class="btn btn--filled" data-page="contact" data-i18n="cta.tour">Private Tour</a>
     <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
@@ -2580,7 +2582,7 @@ img{
       <div class="foot__col">
         <h4 data-i18n="foot.follow">Follow</h4>
         <ul>
-          <li><a href="docs/HKM-Club-News-Newsletter.pdf" target="_blank" rel="noopener" data-i18n="foot.clubnews">Club News</a></li>
+          <li><a href="docs/HKM-Club-News-Newsletter.pdf" target="_blank" rel="noopener" data-i18n="foot.clubnews">Club Newsletter</a></li>
           <li><a href="docs/HKM-Dinghy-Label-Application.pdf" target="_blank" rel="noopener" data-i18n="foot.forms">Forms</a></li>
         </ul>
       </div>
@@ -2840,7 +2842,7 @@ const IMG = {};
       'foot.explore': 'Explore',
       'foot.contact': 'Contact',
       'foot.follow': 'Follow',
-      'foot.clubnews': 'Club News',
+      'foot.clubnews': 'Club Newsletter',
       'foot.forms': 'Forms',
       'foot.address': 'Sai Kung Peninsula · Hong Kong',
       'foot.hours': 'Daily · 09:00 — 19:00',
@@ -3030,7 +3032,7 @@ const IMG = {};
       'foot.explore': '探索',
       'foot.contact': '聯絡',
       'foot.follow': '追蹤',
-      'foot.clubnews': '會所動態',
+      'foot.clubnews': '會所通訊',
       'foot.forms': '表格',
       'foot.address': '西貢半島 · 香港',
       'foot.hours': '每日 · 09:00 — 19:00',
@@ -3220,7 +3222,7 @@ const IMG = {};
       'foot.explore': '探索',
       'foot.contact': '联络',
       'foot.follow': '追踪',
-      'foot.clubnews': '会所动态',
+      'foot.clubnews': '会所通讯',
       'foot.forms': '表格',
       'foot.address': '西貢半島 · 香港',
       'foot.hours': '每日 · 09:00 — 19:00',
@@ -3242,7 +3244,8 @@ const IMG = {};
     lang: (function(){
       var saved = localStorage.getItem('hk-lang');
       // Defensive: only use saved value if it's one of the supported codes
-      return (saved === 'en' || saved === 'zh-Hant' || saved === 'zh-Hans') ? saved : 'en';
+      // Chinese temporarily hidden — force English for now (saved kept for later)
+      return 'en';
     })(),
     page: 'home',
   };
